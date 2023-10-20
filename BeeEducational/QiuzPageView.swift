@@ -11,7 +11,7 @@ struct QiuzPageView: View {
     var body: some View {
         
         
-        
+        var questionViewModel = QuestionViewModel()
         
         
         ZStack {
@@ -24,7 +24,7 @@ struct QiuzPageView: View {
             VStack {
                 
                 
-                Text("Question 1/10")
+                Text("Question 1/5")
                     .font(Font.custom("Titan One", size: 40))
                     .bold()
                     .multilineTextAlignment(.center)
@@ -33,15 +33,15 @@ struct QiuzPageView: View {
                 
 //                Spacer()
                 
-                Text ("Which one of this can create water pollution?")
+                Text (questionViewModel.questions[0].question)
                     .font(Font.custom("Titan One", size: 25))
                     .multilineTextAlignment(.center)
                 
 //                Spacer()
                 
                 
-                Text("A")
-                    .font(Font.custom("Titan One", size: 40))
+                Text(questionViewModel.questions[0].answer1)
+                    .font(Font.custom("Titan One", size: 30))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
                 
@@ -49,8 +49,8 @@ struct QiuzPageView: View {
                     .background(Rectangle().fill(Color.gray).shadow(radius: 3))
                     .cornerRadius(40)
                 
-                Text("A")
-                    .font(Font.custom("Titan One", size: 40))
+                Text(questionViewModel.questions[0].answer2)
+                    .font(Font.custom("Titan One", size: 30))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
                 
@@ -59,8 +59,8 @@ struct QiuzPageView: View {
                     .cornerRadius(40)
                 
                 
-                Text("A")
-                    .font(Font.custom("Titan One", size: 40))
+                Text(questionViewModel.questions[0].answer3)
+                    .font(Font.custom("Titan One", size: 30))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
                 
@@ -68,8 +68,8 @@ struct QiuzPageView: View {
                     .background(Rectangle().fill(Color.gray).shadow(radius: 3))
                     .cornerRadius(40)
                 
-                Text("A")
-                    .font(Font.custom("Titan One", size: 40))
+                Text(questionViewModel.questions[0].answer4)
+                    .font(Font.custom("Titan One", size: 30))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
                 
