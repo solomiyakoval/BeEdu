@@ -11,12 +11,12 @@ struct QiuzPageView: View {
     var body: some View {
         
         
-        var questionViewModel = QuestionViewModel()
+        let questionViewModel = QuestionViewModel()
         
         
         ZStack {
             
-            Image("quizbackground")
+            Image("background")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
@@ -31,13 +31,11 @@ struct QiuzPageView: View {
                     .foregroundColor(Color(red: 0.53, green: 0.8, blue: 0.36))
                     .frame(width: 327, height: 53, alignment: .top)
                 
-//                Spacer()
                 
                 Text (questionViewModel.questions[0].question)
                     .font(Font.custom("Titan One", size: 25))
                     .multilineTextAlignment(.center)
                 
-//                Spacer()
                 
                 
                 Text(questionViewModel.questions[0].answer1)
