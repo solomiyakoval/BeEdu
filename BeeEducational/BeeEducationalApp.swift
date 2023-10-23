@@ -11,7 +11,18 @@ import SwiftUI
 struct BeeEducationalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                
+                ContentView()
+                
+                
+                SettingPage()
+                    .tabItem {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                        
+                    }
+            }
         }
     }
 }
