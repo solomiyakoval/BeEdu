@@ -14,14 +14,25 @@ struct BeeEducationalApp: App {
             TabView{
                 
                 ContentView()
-                
-                
+                    .tabItem {
+                        Image(systemName: "book")
+                            Text("Quiz")
+                    }
+                ContentView()
+                    .tabItem {
+                        Image(systemName: "tree")
+                        Text("My Plants")
+                    }
+                ContentView()
+                    .tabItem {
+                        Image(systemName: "gamecontroller")
+                        Text("Minigames")
+                    }
                 SettingPage()
                     .tabItem {
                         Image(systemName: "gear")
                         Text("Settings")
-                        
-                    }
+                }
             }
         }
     }
