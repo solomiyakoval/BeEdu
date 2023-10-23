@@ -11,7 +11,7 @@ struct QiuzPageView: View {
     var body: some View {
         
         
-        var questionViewModel = QuestionViewModel()
+        let questionViewModel = QuestionViewModel()
         
         
         ZStack {
