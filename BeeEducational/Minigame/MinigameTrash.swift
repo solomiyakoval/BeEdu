@@ -304,7 +304,7 @@ struct MinigameTrash: View {
                     // Pulsante di uscita
                     Button(action: {
                         showExitConfirmation = true // Mostra la schermata di conferma
-                        print("\(showExitConfirmation)")
+                        isGameStarted = false
                     }) {
                         Image(systemName: "arrowshape.left")
                             .foregroundColor(.black)
@@ -361,13 +361,13 @@ struct MinigameTrash: View {
                             .zIndex(1)
 
                         VStack(alignment: .center, spacing: 4) {
-                            Text("Vuoi davvero uscire dal gioco?")
+                            Text("Do you really want to quit the game?")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                                 .frame(width: 306, height: 120)
                             
-                            Button("Annulla") {
+                            Button("Cancel") {
                                 showExitConfirmation = false // Chiudi la schermata di conferma
                             }.fontWeight(.bold)
                                 .foregroundColor(.red)
@@ -378,7 +378,7 @@ struct MinigameTrash: View {
                                 MainMenuExample(score: $zero)
                             }){
                                 ZStack{
-                                     Text("Conferma Uscita")
+                                     Text("Confirm")
                                 }.fontWeight(.bold)
                                     .foregroundColor(.red)
                                     .font(.title)
@@ -468,7 +468,7 @@ struct MinigameTrash: View {
                 
             }
             .padding()
-        }
+        }.navigationBarHidden(true)
     }
     
     func spawnObjectA() {

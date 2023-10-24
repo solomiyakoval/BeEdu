@@ -11,14 +11,29 @@ struct MainMenuExample: View {
     @Binding var score: Int
     
     var body: some View {
-        ZStack{
-            Text("\(score)")
-            
-            VStack{
-                Text("Premi")
-                    .padding(.top, 200.0)
-            }.frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.black)
+        NavigationView {
+            ZStack{
+                Text("\(score)")
+                
+                NavigationLink(destination:{
+                    MinigameTrash()
+                }){
+                    VStack{
+                        Text("Go back")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.black)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 7)
+                            .frame(width: 207, height: 96, alignment: .center)
+                            .background(Color(red: 0.87, green: 0.3, blue: 0.27))
+                            .cornerRadius(40)
+                            .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+                            .zIndex(3)
+                    }.padding(.top, 400).zIndex(3)
+                }.zIndex(3)
+            }
         }.navigationBarHidden(true)
     }
 }

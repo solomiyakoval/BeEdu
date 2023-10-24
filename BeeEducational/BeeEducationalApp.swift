@@ -23,7 +23,7 @@ struct BeeEducationalApp: App {
                         Image(systemName: "tree")
                         Text("My Plants")
                     }
-                ContentView()
+                MinigameTrash()
                     .tabItem {
                         Image(systemName: "gamecontroller")
                         Text("Minigames")
