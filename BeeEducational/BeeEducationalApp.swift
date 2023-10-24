@@ -13,7 +13,7 @@ struct BeeEducationalApp: App {
         WindowGroup {
             TabView{
                 
-                ContentView()
+                QiuzPageView()
                     .tabItem {
                         Image(systemName: "book")
                             Text("Quiz")

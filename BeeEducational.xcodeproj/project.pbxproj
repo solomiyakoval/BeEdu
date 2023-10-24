@@ -16,6 +16,7 @@
 		69AFC4AA2ADE8DC700FFD4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AFC4A92ADE8DC700FFD4C7 /* Assets.xcassets */; };
 		69AFC4AD2ADE8DC700FFD4C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AFC4AC2ADE8DC700FFD4C7 /* Preview Assets.xcassets */; };
 		69D9CF062AE6760E00FD1808 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D9CF052AE6760E00FD1808 /* SettingPage.swift */; };
+		69D9CF082AE6848700FD1808 /* StartingQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D9CF072AE6848700FD1808 /* StartingQuiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		69AFC4A92ADE8DC700FFD4C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69AFC4AC2ADE8DC700FFD4C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		69D9CF052AE6760E00FD1808 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingPage.swift; path = ../SettingPage.swift; sourceTree = "<group>"; };
+		69D9CF072AE6848700FD1808 /* StartingQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingQuiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				69AFC4A52ADE8DC600FFD4C7 /* BeeEducationalApp.swift */,
 				69AFC4A72ADE8DC600FFD4C7 /* ContentView.swift */,
 				016495102AE26DC600660D3C /* QiuzPageView.swift */,
+				69D9CF072AE6848700FD1808 /* StartingQuiz.swift */,
 				016495162AE67C9800660D3C /* CorrectAnswerView.swift */,
 				016495122AE2713300660D3C /* Question.swift */,
 				016495142AE27DF800660D3C /* QuestionViewModel.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				69AFC4A82ADE8DC600FFD4C7 /* ContentView.swift in Sources */,
 				016495112AE26DC600660D3C /* QiuzPageView.swift in Sources */,
+				69D9CF082AE6848700FD1808 /* StartingQuiz.swift in Sources */,
 				016495172AE67C9800660D3C /* CorrectAnswerView.swift in Sources */,
 				016495152AE27DF800660D3C /* QuestionViewModel.swift in Sources */,
 				016495132AE2713300660D3C /* Question.swift in Sources */,
