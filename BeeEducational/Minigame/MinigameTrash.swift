@@ -196,8 +196,6 @@ struct MinigameTrash: View {
                         .opacity(isGameStarted ? 1.0 : 0.0)
                     }
                     
-                    
-                    
                     // Visualizza gli oggetti A (spazzatura) di base
                     if let objectA = objectA {
                         if !objectA.disappeared {
