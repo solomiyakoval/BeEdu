@@ -11,6 +11,7 @@
 		016495132AE2713300660D3C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016495122AE2713300660D3C /* Question.swift */; };
 		016495152AE27DF800660D3C /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016495142AE27DF800660D3C /* QuestionViewModel.swift */; };
 		016495172AE67C9800660D3C /* CorrectAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016495162AE67C9800660D3C /* CorrectAnswerView.swift */; };
+		1E7891DD2AE7BAE200A385DA /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7891DC2AE7BAE200A385DA /* WelcomeScreenView.swift */; };
 		69AFC4A62ADE8DC600FFD4C7 /* BeeEducationalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFC4A52ADE8DC600FFD4C7 /* BeeEducationalApp.swift */; };
 		69AFC4A82ADE8DC600FFD4C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFC4A72ADE8DC600FFD4C7 /* ContentView.swift */; };
 		69AFC4AA2ADE8DC700FFD4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AFC4A92ADE8DC700FFD4C7 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		016495122AE2713300660D3C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		016495142AE27DF800660D3C /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		016495162AE67C9800660D3C /* CorrectAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerView.swift; sourceTree = "<group>"; };
+		1E7891DC2AE7BAE200A385DA /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		69AFC4A22ADE8DC600FFD4C7 /* BeeEducational.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeEducational.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AFC4A52ADE8DC600FFD4C7 /* BeeEducationalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeEducationalApp.swift; sourceTree = "<group>"; };
 		69AFC4A72ADE8DC600FFD4C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				69AFC4A52ADE8DC600FFD4C7 /* BeeEducationalApp.swift */,
 				69AFC4A72ADE8DC600FFD4C7 /* ContentView.swift */,
+				1E7891DC2AE7BAE200A385DA /* WelcomeScreenView.swift */,
 				016495102AE26DC600660D3C /* QiuzPageView.swift */,
 				69D9CF072AE6848700FD1808 /* StartingQuiz.swift */,
 				016495162AE67C9800660D3C /* CorrectAnswerView.swift */,
@@ -201,6 +204,7 @@
 				016495172AE67C9800660D3C /* CorrectAnswerView.swift in Sources */,
 				8B6BA02F2AE7AF2600A1996D /* ObjectAModel.swift in Sources */,
 				016495152AE27DF800660D3C /* QuestionViewModel.swift in Sources */,
+				1E7891DD2AE7BAE200A385DA /* WelcomeScreenView.swift in Sources */,
 				8B6BA0272AE7AE5600A1996D /* MainMenuExample.swift in Sources */,
 				016495132AE2713300660D3C /* Question.swift in Sources */,
 				69AFC4A62ADE8DC600FFD4C7 /* BeeEducationalApp.swift in Sources */,
