@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+
 struct WelcomeScreenView: View {
+ @State  private var isPresented = false
     
     var Player: String = "Gino"
     var Points: String = "2874365"
     var body: some View {
+        
+        
         
         
         ZStack {Color(.yellow)
@@ -24,7 +28,7 @@ struct WelcomeScreenView: View {
                 .position(CGPoint(x: 200.0, y: 670.0))
                 .foregroundColor(.white)
                 .opacity(0.90)
-           
+            
             
             
             
@@ -38,7 +42,7 @@ struct WelcomeScreenView: View {
                     .fontWeight(.bold)
                     .font(.largeTitle)
                     .foregroundStyle(.yellow)
-                   
+                
                 
                 
                 
@@ -52,7 +56,7 @@ struct WelcomeScreenView: View {
             VStack{
                 Image("hive")
                     .position(CGPoint(x: 328.0, y: 170.0))
-            
+                
                 
             }
             VStack {
@@ -63,15 +67,20 @@ struct WelcomeScreenView: View {
                 Image("Arrow1")
                     .position(CGPoint(x: 200.0, y: 310.0))
             }
-            }
-                   
-                
-                
-            }
-            
         }
+        Button("Detail") {
+            isPresented = true
+        }
+        .fullScreenCover(isPresented: $isPresented) {
+        }
+        
+        
+        
+    }
+}
+
     
 
-#Preview {
-    WelcomeScreenView()
+#Preview{
+WelcomeScreenView()
 }

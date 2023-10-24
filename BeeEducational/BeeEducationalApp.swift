@@ -8,15 +8,25 @@
 import SwiftUI
 
 @main
+struct BeeEducationApp1: App {
+    var body: some Scene {
+        WindowGroup{
+            WelcomeScreenView()
+        }
+    }
+}
+    
+
 struct BeeEducationalApp: App {
     var body: some Scene {
         WindowGroup {
+            
             TabView{
                 
                 QiuzPageView()
                     .tabItem {
                         Image(systemName: "book")
-                            Text("Quiz")
+                        Text("Quiz")
                     }
                 ContentView()
                     .tabItem {
@@ -32,8 +42,9 @@ struct BeeEducationalApp: App {
                     .tabItem {
                         Image(systemName: "gear")
                         Text("Settings")
-                }
+                    }
             }
+            
         }
     }
 }
