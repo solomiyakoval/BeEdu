@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		016495112AE26DC600660D3C /* QiuzPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016495102AE26DC600660D3C /* QiuzPageView.swift */; };
+		01010D6A2AE7BB000081C6F4 /* WrongAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01010D692AE7BB000081C6F4 /* WrongAnswerView.swift */; };
 		016495132AE2713300660D3C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016495122AE2713300660D3C /* Question.swift */; };
 		016495152AE27DF800660D3C /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016495142AE27DF800660D3C /* QuestionViewModel.swift */; };
 		016495172AE67C9800660D3C /* CorrectAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016495162AE67C9800660D3C /* CorrectAnswerView.swift */; };
@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		016495102AE26DC600660D3C /* QiuzPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QiuzPageView.swift; path = BeeEducational/QiuzPageView.swift; sourceTree = SOURCE_ROOT; };
+		01010D692AE7BB000081C6F4 /* WrongAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerView.swift; sourceTree = "<group>"; };
 		016495122AE2713300660D3C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		016495142AE27DF800660D3C /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		016495162AE67C9800660D3C /* CorrectAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerView.swift; sourceTree = "<group>"; };
@@ -54,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01010D6B2AE7BB3A0081C6F4 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				69D9CF072AE6848700FD1808 /* StartingQuiz.swift */,
+				016495162AE67C9800660D3C /* CorrectAnswerView.swift */,
+				01010D692AE7BB000081C6F4 /* WrongAnswerView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
 		69AFC4992ADE8DC600FFD4C7 = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +85,7 @@
 			children = (
 				69AFC4A52ADE8DC600FFD4C7 /* BeeEducationalApp.swift */,
 				69AFC4A72ADE8DC600FFD4C7 /* ContentView.swift */,
-				016495102AE26DC600660D3C /* QiuzPageView.swift */,
-				69D9CF072AE6848700FD1808 /* StartingQuiz.swift */,
-				016495162AE67C9800660D3C /* CorrectAnswerView.swift */,
+				01010D6B2AE7BB3A0081C6F4 /* Quiz */,
 				8B6BA0232AE7AD0700A1996D /* Minigame */,
 				016495122AE2713300660D3C /* Question.swift */,
 				016495142AE27DF800660D3C /* QuestionViewModel.swift */,
@@ -194,9 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01010D6A2AE7BB000081C6F4 /* WrongAnswerView.swift in Sources */,
 				69AFC4A82ADE8DC600FFD4C7 /* ContentView.swift in Sources */,
 				8B6BA0252AE7ADAA00A1996D /* MinigameTrash.swift in Sources */,
-				016495112AE26DC600660D3C /* QiuzPageView.swift in Sources */,
 				69D9CF082AE6848700FD1808 /* StartingQuiz.swift in Sources */,
 				016495172AE67C9800660D3C /* CorrectAnswerView.swift in Sources */,
 				8B6BA02F2AE7AF2600A1996D /* ObjectAModel.swift in Sources */,
