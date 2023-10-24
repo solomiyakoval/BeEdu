@@ -364,13 +364,12 @@ struct MinigameTrash: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                                 .frame(width: 306, height: 120)
-                            
                             Button("Cancel") {
                                 showExitConfirmation = false // Chiudi la schermata di conferma
                             }.fontWeight(.bold)
                                 .foregroundColor(.red)
                             .font(.title)
-                            .padding(.bottom, 5.0)
+                            .padding(.bottom, 0.0)
                             
                             NavigationLink(destination:{
                                 MainMenuExample(score: $zero)
