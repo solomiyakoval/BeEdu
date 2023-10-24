@@ -23,17 +23,6 @@ struct MinigameTrash: View {
     private var uiOffsetsX = 35.0
     private var uiOffsetsY = 65.0
     
-    /*
-     let trashItems: [TrashItem] = [
-     TrashItem(image: "rectangle.portrait.and.arrow.right.fill", type: .paper, binType: .paperBin),
-     TrashItem(image: "eraser.fill", type: .plastic, binType: .plasticBin),
-     TrashItem(image: "folder.fill", type: .aluminum, binType: .aluminumBin),
-     TrashItem(image: "heart.fill", type: .organic, binType: .organicBin),
-     TrashItem(image: "facemask.fill", type: .glass, binType: .glassBin),
-     //Icone e tipi di spazzatura
-     ]
-     */
-    
     let trashItems: [TrashItem] = [
         TrashItem(image: "trash_icon13", type: .paper, binType: .paperBin),
         TrashItem(image: "trash_icon14", type: .plastic, binType: .plasticBin),
