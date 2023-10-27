@@ -14,10 +14,8 @@ struct MainMenuExample: View {
         NavigationView {
             ZStack{
                 Text("\(score)")
-                
-                NavigationLink(destination:{
-                    MinigameTrash()
-                }){
+                NavigationLink(destination:
+                    MinigameTrash()){
                     VStack{
                         Text("Go back")
                             .font(.largeTitle)
