@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct WelcomeScreenView: View {
- @State  private var isPresented = false
     
     var Player: String = "Gino"
     var Points: String = "2874365"
@@ -66,16 +65,15 @@ struct WelcomeScreenView: View {
             VStack {
                 Image("Arrow1")
                     .position(CGPoint(x: 200.0, y: 310.0))
+                
             }
         }
-        Button("Detail") {
-            isPresented = true
-        }
-        .fullScreenCover(isPresented: $isPresented) {
-        }
         
-        
-        
+    }
+}
+struct WelcomeScreenView_Previews : PreviewProvider {
+    static var previews: some View{
+        WelcomeScreenView()
     }
 }
 
