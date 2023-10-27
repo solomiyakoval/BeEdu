@@ -20,15 +20,8 @@ struct ContentView: View {
                         .easeOut(duration: 1.5))
             } else {
                 Text("We bello")
-                
                 TabView {
-                    
-                    QiuzPageView()
-                        .tabItem {
-                            Image(systemName: "book")
-                            Text("Quiz")
-                        }
-                   PlantView()
+                    PlantView()
                         .tabItem {
                             Image(systemName: "tree")
                             Text("My Plants")
@@ -38,6 +31,11 @@ struct ContentView: View {
                             Image(systemName: "gamecontroller")
                             Text("Minigames")
                         }
+                    QiuzPageView()
+                        .tabItem {
+                            Image(systemName: "book")
+                            Text("Quiz")
+                        }
                     SettingPage()
                         .tabItem {
                             Image(systemName: "gear")
@@ -46,25 +44,25 @@ struct ContentView: View {
                 }
             }
         }
-                .onAppear {
-                    DispatchQueue.main
-                        .asyncAfter(deadline: .now()+2)
-                    {
-                        withAnimation {
-                            self.showSplash = false
-                        }
-                        
-                    }
+        .onAppear {
+            DispatchQueue.main
+                .asyncAfter(deadline: .now()+2)
+            {
+                withAnimation {
+                    self.showSplash = false
                 }
+                
+            }
         }
     }
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
+}
 
-    
+
 #Preview {
     ContentView()
 }
