@@ -9,47 +9,62 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showSplash = true
     
-    var Player: String = "Gino"
-    var Points: String = "2874365"
     var body: some View {
-        
-        
-        ZStack {Color(.yellow)
-                .opacity(0.16)
-                .background()
-                .ignoresSafeArea()
-            
-            VStack {
-               
+        ZStack {
+            if showSplash {
+                WelcomeScreenView()
+                    .transition(.opacity)
+                    .animation(
+                        .easeOut(duration: 1.5))
+            } else {
+                Text("We bello")
                 
-                
-                Text("Welcome back")
-                    .fontWeight(.bold)
-                    .font(.largeTitle)
-                    .foregroundStyle(.yellow)
-                Text("\(Player)!")
-                    .fontWeight(.bold)
-                    .font(.largeTitle)
-                    .foregroundStyle(.yellow)
-                
-                
-                
-                
-                Text("Let's keep going on cleaning the world")
-                    .bold()
-                
-                
-                Text("Tap to continue..")
-                    .padding(.top, 300)
-                
-                
+                TabView {
+                    
+                    QiuzPageView()
+                        .tabItem {
+                            Image(systemName: "book")
+                            Text("Quiz")
+                        }
+                   PlantView()
+                        .tabItem {
+                            Image(systemName: "tree")
+                            Text("My Plants")
+                        }
+                    StartingQuiz()
+                        .tabItem {
+                            Image(systemName: "gamecontroller")
+                            Text("Minigames")
+                        }
+                    SettingPage()
+                        .tabItem {
+                            Image(systemName: "gear")
+                            Text("Settings")
+                        }
+                }
             }
-            .padding().frame(width: 500)
+        }
+                .onAppear {
+                    DispatchQueue.main
+                        .asyncAfter(deadline: .now()+2)
+                    {
+                        withAnimation {
+                            self.showSplash = false
+                        }
+                        
+                    }
+                }
         }
     }
-}
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
 
+    
 #Preview {
     ContentView()
 }
