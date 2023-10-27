@@ -12,8 +12,12 @@ struct MinigameTrash: View {
     @State private var objectBCoordinates: [CGPoint] = []
     @State private var showBorder = false
     @State private var isGameStarted = false
+    @State private var hideStartButton = false
     @State private var blackScreenOpacity = 0.7
     @State private var showExitConfirmation = false
+    
+    @State private var isCountdownVisible = false
+    @State private var countdown = 3
     
     @State var zero: Int = 0
     
@@ -22,17 +26,6 @@ struct MinigameTrash: View {
     
     private var uiOffsetsX = 35.0
     private var uiOffsetsY = 65.0
-    
-    /*
-     let trashItems: [TrashItem] = [
-     TrashItem(image: "rectangle.portrait.and.arrow.right.fill", type: .paper, binType: .paperBin),
-     TrashItem(image: "eraser.fill", type: .plastic, binType: .plasticBin),
-     TrashItem(image: "folder.fill", type: .aluminum, binType: .aluminumBin),
-     TrashItem(image: "heart.fill", type: .organic, binType: .organicBin),
-     TrashItem(image: "facemask.fill", type: .glass, binType: .glassBin),
-     //Icone e tipi di spazzatura
-     ]
-     */
     
     let trashItems: [TrashItem] = [
         TrashItem(image: "trash_icon13", type: .paper, binType: .paperBin),
@@ -63,35 +56,51 @@ struct MinigameTrash: View {
                     
                     // Pulsante "START"
                     if !isGameStarted {
-                        Button("START") {
-                            withAnimation {
-                                isGameStarted = true
-                                blackScreenOpacity = 0
+                            Button("START") {
+                                withAnimation {
+                                    isCountdownVisible = true
+                                    hideStartButton = true
+                                }
+
+                                // Avvia il countdown
+                                startCountdown()
                             }
-                            spawnObjectA()
-                            startTimer()
-                        }
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 7)
-                        .frame(width: 207, height: 64, alignment: .center)
-                        .font(.system(size: 50))
-                        .fontWeight(.bold)
-                        .background(
-                            LinearGradient(
-                                stops: [
-                                    Gradient.Stop(color: .white, location: 0.00),
-                                    Gradient.Stop(color: Color(red: 0.48, green: 1, blue: 0.16), location: 1.00),
-                                ],
-                                startPoint: UnitPoint(x: 0, y: -1.42),
-                                endPoint: UnitPoint(x: 0.79, y: 1)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 7)
+                            .frame(width: 207, height: 64, alignment: .center)
+                            .font(.system(size: 50))
+                            .fontWeight(.bold)
+                            .background(
+                                LinearGradient(
+                                    stops: [
+                                        Gradient.Stop(color: .white, location: 0.00),
+                                        Gradient.Stop(color: Color(red: 0.48, green: 1, blue: 0.16), location: 1.00),
+                                    ],
+                                    startPoint: UnitPoint(x: 0, y: -1.42),
+                                    endPoint: UnitPoint(x: 0.79, y: 1)
+                                )
                             )
-                        )
-                        .foregroundColor(.black) // Cambia il colore del testo a blu o al colore desiderato
-                        .cornerRadius(40)
-                        .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 4)
-                        .position(x: UIScreen.main.bounds.size.width / 1.66, y: UIScreen.main.bounds.size.height / 2)
-                        .opacity(isGameStarted ? 0 : 1)
-                        
+                            .foregroundColor(.black)
+                            .cornerRadius(40)
+                            .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 4)
+                            .position(x: UIScreen.main.bounds.size.width / 1.66, y: UIScreen.main.bounds.size.height / 2)
+                            .opacity(hideStartButton ? 0 : 1) // Imposta l'opacità in base a isGameStarted
+                        }
+                    
+                    if isCountdownVisible {
+                        if countdown > 0 {
+                            Text("\(countdown)")
+                                .font(.system(size: 100))
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .opacity(1.0)
+                        } else {
+                            Text("GO!")
+                                .font(.system(size: 100))
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .opacity(1.0)
+                        }
                     }
                     
                     
@@ -195,8 +204,6 @@ struct MinigameTrash: View {
                         )
                         .opacity(isGameStarted ? 1.0 : 0.0)
                     }
-                    
-                    
                     
                     // Visualizza gli oggetti A (spazzatura) di base
                     if let objectA = objectA {
@@ -304,7 +311,7 @@ struct MinigameTrash: View {
                     // Pulsante di uscita
                     Button(action: {
                         showExitConfirmation = true // Mostra la schermata di conferma
-                        print("\(showExitConfirmation)")
+                        isGameStarted = false
                     }) {
                         Image(systemName: "arrowshape.left")
                             .foregroundColor(.black)
@@ -359,26 +366,25 @@ struct MinigameTrash: View {
                         Color.black.opacity(0.7)
                             .edgesIgnoringSafeArea(.all)
                             .zIndex(1)
-
+                        
                         VStack(alignment: .center, spacing: 4) {
-                            Text("Vuoi davvero uscire dal gioco?")
+                            Text("Do you really want to quit the game?")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                                 .frame(width: 306, height: 120)
-                            
-                            Button("Annulla") {
+                            Button("Cancel") {
                                 showExitConfirmation = false // Chiudi la schermata di conferma
                             }.fontWeight(.bold)
                                 .foregroundColor(.red)
-                            .font(.title)
-                            .padding(.bottom, 5.0)
+                                .font(.title)
+                                .padding(.bottom, 0.0)
                             
                             NavigationLink(destination:{
                                 MainMenuExample(score: $zero)
                             }){
                                 ZStack{
-                                     Text("Conferma Uscita")
+                                    Text("Confirm")
                                 }.fontWeight(.bold)
                                     .foregroundColor(.red)
                                     .font(.title)
@@ -401,7 +407,7 @@ struct MinigameTrash: View {
                         .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                         .zIndex(2)
                     }
-
+                    
                     
                     if remainingTime <= 0 {
                         // Schermata nera quando il tempo scade
@@ -468,7 +474,7 @@ struct MinigameTrash: View {
                 
             }
             .padding()
-        }
+        }.navigationBarHidden(true)
     }
     
     func spawnObjectA() {
@@ -504,6 +510,24 @@ struct MinigameTrash: View {
             }
         }
     }
+    
+    func startCountdown() {
+        var countdownValue = 3
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            if countdownValue >= 0 {
+                countdown = countdownValue
+                countdownValue -= 1
+            } else {
+                isCountdownVisible = false
+                timer.invalidate()
+                isGameStarted = true
+                blackScreenOpacity = 0
+                spawnObjectA()
+                startTimer()
+            }
+        }
+    }
 }
 
 func distanceBetweenPoints(_ point1: CGPoint, _ point2: CGPoint) -> CGFloat {
@@ -511,7 +535,6 @@ func distanceBetweenPoints(_ point1: CGPoint, _ point2: CGPoint) -> CGFloat {
     let deltaY = point1.y - point2.y
     return sqrt(deltaX * deltaX + deltaY * deltaY)
 }
-
 
 #Preview {
     MinigameTrash()

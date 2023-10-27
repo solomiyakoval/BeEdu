@@ -9,12 +9,12 @@ import SwiftUI
 
 struct StartingQuiz: View {
     var body: some View {
-        
-        
+
+
         Text("")
-        
-        
-       
+
+
+
     }
 }
 
