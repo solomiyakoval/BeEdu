@@ -42,7 +42,7 @@ struct CorrectAnswerView: View {
                         .padding(5)
                     
                     
-                    Text(questionViewModel.questions[0].correctanswer)
+                    Text(questionViewModel.questions[0].answer)
                         .font(.system(size: 25))
                         .bold()
                         .multilineTextAlignment(.center)

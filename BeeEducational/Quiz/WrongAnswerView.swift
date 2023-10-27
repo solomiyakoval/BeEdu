@@ -27,7 +27,7 @@ struct WrongAnswerView: View {
                     
                     .font(.system(size: 55))
                     .bold()
-                    .shadow(color: .red, radius: 20, x:2)
+                   .shadow(color: .gray, radius: 10, x:5)
             
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color(red: 0.87, green: 0.3, blue: 0.27))
@@ -45,7 +45,7 @@ struct WrongAnswerView: View {
                     .padding(5)
                 
                 
-                Text(questionViewModel.questions[0].correctanswer)
+                Text(questionViewModel.questions[0].answer)
                     .font(.system(size: 25))
                     .bold()
                     .multilineTextAlignment(.center)
