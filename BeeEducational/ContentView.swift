@@ -26,7 +26,7 @@ struct ContentView: View {
                             Image(systemName: "tree")
                             Text("My Plants")
                         }
-                    StartingQuiz()
+                    QiuzPageView()
                         .tabItem {
                             Image(systemName: "gamecontroller")
                             Text("Minigames")
