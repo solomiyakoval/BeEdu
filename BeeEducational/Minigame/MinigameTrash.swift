@@ -122,10 +122,12 @@ struct MinigameTrash: View {
                     // Visualizza i cestini aggiuntivi
                     ForEach(0..<objectBCoordinates.count, id: \.self) { index in
                         ZStack {
-                            Image(imageBinAssign.imageTrashBin[index])
-                                .resizable()
-                                .frame(width: 80, height: 100)
-                                .position(objectBCoordinates[index])
+                            if index < imageBinAssign.imageTrashBin.count {
+                                Image(imageBinAssign.imageTrashBin[index])
+                                    .resizable()
+                                    .frame(width: 80, height: 100)
+                                    .position(objectBCoordinates[index])
+                            }
                             
                             if let objectA = objectA, !objectA.disappeared {
                                 if let binType = trashItems.first(where: { $0.type == objectA.trashType })?.binType {
