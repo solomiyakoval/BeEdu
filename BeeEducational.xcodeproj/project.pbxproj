@@ -25,6 +25,7 @@
 		8B81B83C2AEBB07100CF8BCF /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B83B2AEBB07100CF8BCF /* WelcomeScreenView.swift */; };
 		8B81B83E2AEBB0C100CF8BCF /* QiuzPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B83D2AEBB0C100CF8BCF /* QiuzPageView.swift */; };
 		8B81B8402AEBB13A00CF8BCF /* StartingQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B83F2AEBB13A00CF8BCF /* StartingQuiz.swift */; };
+		8B81B8422AEBBAFD00CF8BCF /* TestQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B8412AEBBAFD00CF8BCF /* TestQuiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		8B81B83B2AEBB07100CF8BCF /* WelcomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		8B81B83D2AEBB0C100CF8BCF /* QiuzPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QiuzPageView.swift; path = BeeEducational/QiuzPageView.swift; sourceTree = SOURCE_ROOT; };
 		8B81B83F2AEBB13A00CF8BCF /* StartingQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartingQuiz.swift; path = BeeEducational/StartingQuiz.swift; sourceTree = SOURCE_ROOT; };
+		8B81B8412AEBBAFD00CF8BCF /* TestQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				8B81B83D2AEBB0C100CF8BCF /* QiuzPageView.swift */,
 				8B81B8352AEBAFD200CF8BCF /* CorrectAnswerView.swift */,
 				8B81B8372AEBB02D00CF8BCF /* WrongAnswerView.swift */,
+				8B81B8412AEBBAFD00CF8BCF /* TestQuiz.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				69AFC4A62ADE8DC600FFD4C7 /* BeeEducationalApp.swift in Sources */,
 				69D9CF062AE6760E00FD1808 /* SettingPage.swift in Sources */,
 				8B6BA02D2AE7AEE600A1996D /* TrashBinModel.swift in Sources */,
+				8B81B8422AEBBAFD00CF8BCF /* TestQuiz.swift in Sources */,
 				8B81B83E2AEBB0C100CF8BCF /* QiuzPageView.swift in Sources */,
 				8B6BA02A2AE7AE9800A1996D /* TrashBinImageView.swift in Sources */,
 			);
