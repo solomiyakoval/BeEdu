@@ -6,7 +6,7 @@ struct MinigameTrash: View {
     @State private var objectA: ObjectA?
     @State private var objectBPosition: CGPoint = .zero
     @State private var isTimerRunning = true
-    @State private var remainingTime = 20
+    @State private var remainingTime = 5
     @State public var score = 0
     @State private var countdownTimer: Timer?
     @State private var objectBCoordinates: [CGPoint] = []
@@ -504,6 +504,7 @@ struct MinigameTrash: View {
                 if self.remainingTime > 0 {
                     self.remainingTime -= 1
                 } else {
+                    ScoreManager.totalScore += score
                     isTimerRunning = false
                     // Il timer è scaduto
                     self.objectA = nil

@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+class ScoreManager {
+    static var totalScore = 0
+}
+
 @main
 struct BeeEducationalApp: App {
     var body: some Scene {

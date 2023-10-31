@@ -20,28 +20,6 @@ struct ContentView: View {
                         .easeOut(duration: 1.5))
             } else {
                 Text("We bello")
-                TabView {
-                    PlantView()
-                        .tabItem {
-                            Image(systemName: "tree")
-                            Text("My Plants")
-                        }
-                    QiuzPageView()
-                        .tabItem {
-                            Image(systemName: "gamecontroller")
-                            Text("Minigames")
-                        }
-                    QiuzPageView()
-                        .tabItem {
-                            Image(systemName: "book")
-                            Text("Quiz")
-                        }
-                    SettingPage()
-                        .tabItem {
-                            Image(systemName: "gear")
-                            Text("Settings")
-                        }
-                }
             }
         }
         .onAppear {

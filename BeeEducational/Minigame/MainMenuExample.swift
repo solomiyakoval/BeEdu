@@ -13,7 +13,7 @@ struct MainMenuExample: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Text("\(score)")
+                Text("\(ScoreManager.totalScore)")
                 NavigationLink(destination:
                     MinigameTrash()){
                     VStack{

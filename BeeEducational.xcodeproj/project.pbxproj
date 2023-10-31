@@ -17,9 +17,9 @@
 		8B6BA02A2AE7AE9800A1996D /* TrashBinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BA0292AE7AE9800A1996D /* TrashBinImageView.swift */; };
 		8B6BA02D2AE7AEE600A1996D /* TrashBinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BA02C2AE7AEE600A1996D /* TrashBinModel.swift */; };
 		8B6BA02F2AE7AF2600A1996D /* ObjectAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BA02E2AE7AF2600A1996D /* ObjectAModel.swift */; };
-		8B81B83A2AEBB03500CF8BCF /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B8392AEBB03500CF8BCF /* PlantView.swift */; };
-		8B81B83C2AEBB07100CF8BCF /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B83B2AEBB07100CF8BCF /* WelcomeScreenView.swift */; };
 		8B81B83E2AEBB0C100CF8BCF /* QiuzPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B83D2AEBB0C100CF8BCF /* QiuzPageView.swift */; };
+		8B81B8442AF016FC00CF8BCF /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B8432AF016FC00CF8BCF /* PlantView.swift */; };
+		8B81B8462AF0171800CF8BCF /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B8452AF0171800CF8BCF /* WelcomeScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		8B6BA0292AE7AE9800A1996D /* TrashBinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashBinImageView.swift; sourceTree = "<group>"; };
 		8B6BA02C2AE7AEE600A1996D /* TrashBinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashBinModel.swift; sourceTree = "<group>"; };
 		8B6BA02E2AE7AF2600A1996D /* ObjectAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAModel.swift; sourceTree = "<group>"; };
-		8B81B8392AEBB03500CF8BCF /* PlantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
-		8B81B83B2AEBB07100CF8BCF /* WelcomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		8B81B83D2AEBB0C100CF8BCF /* QiuzPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QiuzPageView.swift; path = BeeEducational/QiuzPageView.swift; sourceTree = SOURCE_ROOT; };
+		8B81B8432AF016FC00CF8BCF /* PlantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlantView.swift; path = ../../../../../Downloads/PlantView.swift; sourceTree = "<group>"; };
+		8B81B8452AF0171800CF8BCF /* WelcomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeScreenView.swift; path = ../../../../../Downloads/WelcomeScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 			children = (
 				69AFC4A52ADE8DC600FFD4C7 /* BeeEducationalApp.swift */,
 				69AFC4A72ADE8DC600FFD4C7 /* ContentView.swift */,
-				8B81B8392AEBB03500CF8BCF /* PlantView.swift */,
-				8B81B83B2AEBB07100CF8BCF /* WelcomeScreenView.swift */,
+				8B81B8432AF016FC00CF8BCF /* PlantView.swift */,
+				8B81B8452AF0171800CF8BCF /* WelcomeScreenView.swift */,
 				01010D6B2AE7BB3A0081C6F4 /* Quiz */,
 				8B6BA0232AE7AD0700A1996D /* Minigame */,
 				69D9CF052AE6760E00FD1808 /* SettingPage.swift */,
@@ -198,13 +198,13 @@
 			files = (
 				69AFC4A82ADE8DC600FFD4C7 /* ContentView.swift in Sources */,
 				8B6BA0252AE7ADAA00A1996D /* MinigameTrash.swift in Sources */,
-				8B81B83A2AEBB03500CF8BCF /* PlantView.swift in Sources */,
 				8B6BA02F2AE7AF2600A1996D /* ObjectAModel.swift in Sources */,
-				8B81B83C2AEBB07100CF8BCF /* WelcomeScreenView.swift in Sources */,
 				8B6BA0272AE7AE5600A1996D /* MainMenuExample.swift in Sources */,
 				69AFC4A62ADE8DC600FFD4C7 /* BeeEducationalApp.swift in Sources */,
 				69D9CF062AE6760E00FD1808 /* SettingPage.swift in Sources */,
+				8B81B8442AF016FC00CF8BCF /* PlantView.swift in Sources */,
 				8B6BA02D2AE7AEE600A1996D /* TrashBinModel.swift in Sources */,
+				8B81B8462AF0171800CF8BCF /* WelcomeScreenView.swift in Sources */,
 				8B81B83E2AEBB0C100CF8BCF /* QiuzPageView.swift in Sources */,
 				8B6BA02A2AE7AE9800A1996D /* TrashBinImageView.swift in Sources */,
 			);
