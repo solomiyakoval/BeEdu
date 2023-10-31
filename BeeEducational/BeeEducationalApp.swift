@@ -9,6 +9,7 @@ import SwiftUI
 
 class ScoreManager {
     static var totalScore = 0
+    var sco = 3
 }
 
 @main
