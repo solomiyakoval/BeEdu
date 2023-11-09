@@ -19,10 +19,32 @@ struct ContentView: View {
                     .animation(
                         .easeOut(duration: 1.5))
             } else {
-                Text("We bello")
+                Text("")
+                TabView{
+                    
+                    QiuzPageView()
+                        .tabItem {
+                            Image(systemName: "book")
+                            Text("Quiz")
+                        }
+                    PlantView()
+                        .tabItem {
+                            Image(systemName: "tree")
+                            Text("My Plants")
+                        }
+                    MinigameTrash()
+                        .tabItem {
+                            Image(systemName: "gamecontroller")
+                            Text("Minigames")
+                        }
+                    SettingPage()
+                        .tabItem {
+                            Image(systemName: "gear")
+                            Text("Settings")
+                        }
+                }
             }
-        }
-        .onAppear {
+        }.onAppear {
             DispatchQueue.main
                 .asyncAfter(deadline: .now()+2)
             {
@@ -33,13 +55,15 @@ struct ContentView: View {
             }
         }
     }
-}
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
+    
+   
 }
-
 
 #Preview {
     ContentView()
